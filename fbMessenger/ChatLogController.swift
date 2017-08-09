@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import CoreData
 
 class ChatLogController: UIViewController {
     
@@ -23,31 +24,25 @@ class ChatLogController: UIViewController {
         return collectionView
     }()
     
-    private lazy var contentView:UIView = {
+    fileprivate lazy var contentView:UIView = {
         let view = UIView()
         self.scrollContainer.addSubview(view)
         return view
     }()
     
-    private lazy var scrollContainer:UIScrollView = {
+    fileprivate lazy var scrollContainer:UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.bounces = false
         scrollView.backgroundColor = UIColor.white
         self.view.addSubview(scrollView)
         return scrollView
     }()
-    
-    private lazy var toolBar:UIToolbar = {
-        let toolBar = UIToolbar()
-        
-        self.contentView.addSubview(toolBar)
-        return toolBar
-    }()
-    
-    private lazy var textField:UITextField = {
-        let textField = UITextField()
-        
-        return textField
+
+    fileprivate lazy var toolbar:CommunicatorToolbarView = {
+        let toolbar = CommunicatorToolbarView()
+        toolbar.configure(delegate: self, toolbarDelegate: self)
+        self.view.addSubview(toolbar)
+        return toolbar
     }()
     
     var friend: Friend? {
@@ -66,6 +61,17 @@ class ChatLogController: UIViewController {
         self.view.updateConstraintsIfNeeded()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatLogController.keyboardWillShow(notification:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatLogController.keyboardWillHide(notification:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        scrollToBottom()
+    }
+    
     override func updateViewConstraints() {
         scrollContainer.snp.updateConstraints { (make) in
             make.edges.equalTo(self.view)
@@ -75,18 +81,24 @@ class ChatLogController: UIViewController {
             make.edges.equalTo(self.view)
         }
         
-        toolBar.snp.updateConstraints { (make) in
-            make.bottom.leading.trailing.equalTo(self.contentView)
-            make.height.equalTo(44)
+        toolbar.snp.updateConstraints { (make) in
+            make.leading.trailing.bottom.equalTo(self.contentView)
+            make.height.greaterThanOrEqualTo(44)
         }
         
         chatController.snp.updateConstraints { (make) in
             make.top.leading.trailing.equalTo(self.contentView)
-            //make.bottom.equalTo(self.contentView)
-            make.bottom.equalTo(self.toolBar.snp.top)
+            make.bottom.equalTo(self.toolbar.snp.top)
         }
         
         super.updateViewConstraints()
+    }
+    
+    fileprivate func scrollToBottom() {
+        if let messages = messages {
+            let lastItemIndex = IndexPath(item: messages.count - 1, section: 0)
+            chatController.scrollToItem(at: lastItemIndex, at: .bottom, animated: true)
+        }
     }
     
 }
@@ -135,5 +147,63 @@ extension ChatLogController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(8, 0, 0, 0)
+    }
+}
+
+extension ChatLogController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    
+    func keyboardWillShow(notification:NSNotification){
+        
+        var userInfo = notification.userInfo!
+        var keyboardFrame:CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        self.contentView.snp.updateConstraints { (make) in
+            make.bottom.equalTo(self.view).inset(keyboardFrame.size.height)
+        }
+        
+        UIView.animate(withDuration: 0.4, animations: { 
+            self.view.layoutIfNeeded()
+        }) { [weak self] (finished) in
+            guard let _self = self else {return}
+            _self.scrollToBottom()
+        }
+    }
+    
+    func keyboardWillHide(notification:NSNotification){
+        self.contentView.snp.updateConstraints { (make) in
+            make.bottom.equalTo(self.view)
+        }
+        UIView.animate(withDuration: 0.4) { 
+            self.view.layoutIfNeeded()
+        }
+    }
+}
+
+extension ChatLogController: CommunicatorToolbarDelegate {
+    func submitPressed(messageText:String) {
+        let delegate = UIApplication.shared.delegate as? AppDelegate
+
+        guard let friend = messages?.first?.friend,
+        let context = delegate?.managedObjectContext else {return}
+        
+        let message = NSEntityDescription.insertNewObject(forEntityName: "Message", into: context) as! Message
+        message.friend = friend
+        message.text = messageText
+        message.date = Date()
+        message.isSender = NSNumber(value: true as Bool)
+        
+        messages?.append(message)
+        let indexPath = IndexPath(item: (messages?.count)!-1, section: 0)
+        let indexPaths = [indexPath]
+        chatController.insertItems(at: indexPaths)
+        scrollToBottom()
+        toolbar.clearText()
     }
 }

@@ -11,6 +11,7 @@
 		4C696C6A1F3A5C0500366947 /* ChatLogSelfMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C691F3A5C0500366947 /* ChatLogSelfMessageCell.swift */; };
 		4C696C6D1F3A5C7500366947 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C6C1F3A5C7500366947 /* ChatModel.swift */; };
 		4C696C701F3B4ADB00366947 /* ChatContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C6F1F3B4ADB00366947 /* ChatContainerController.swift */; };
+		4C696C721F3B952B00366947 /* CommunicatorToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C711F3B952B00366947 /* CommunicatorToolbarView.swift */; };
 		C7087C981CC01DE100D22270 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7087C971CC01DE100D22270 /* CustomTabBarController.swift */; };
 		C7154C791CB86CB400877DD2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7154C781CB86CB400877DD2 /* ChatLogController.swift */; };
 		C7747B791CAF451200A8B1DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7747B781CAF451200A8B1DA /* AppDelegate.swift */; };
@@ -31,6 +32,7 @@
 		4C696C691F3A5C0500366947 /* ChatLogSelfMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogSelfMessageCell.swift; sourceTree = "<group>"; };
 		4C696C6C1F3A5C7500366947 /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		4C696C6F1F3B4ADB00366947 /* ChatContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContainerController.swift; sourceTree = "<group>"; };
+		4C696C711F3B952B00366947 /* CommunicatorToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorToolbarView.swift; sourceTree = "<group>"; };
 		981957F5AF9BC0C7FEA9A6C2 /* Pods-fbMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbMessenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbMessenger/Pods-fbMessenger.debug.xcconfig"; sourceTree = "<group>"; };
 		C7087C971CC01DE100D22270 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		C7154C781CB86CB400877DD2 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		4C696C6E1F3B497B00366947 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4C696C711F3B952B00366947 /* CommunicatorToolbarView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				C7747B7B1CAF451200A8B1DA /* ViewController.swift in Sources */,
 				C7087C981CC01DE100D22270 /* CustomTabBarController.swift in Sources */,
 				4C696C681F3A5BFA00366947 /* ChatLogSenderMessageCell.swift in Sources */,
+				4C696C721F3B952B00366947 /* CommunicatorToolbarView.swift in Sources */,
 				C7747B811CAF451200A8B1DA /* fbMessenger.xcdatamodeld in Sources */,
 				C7747B791CAF451200A8B1DA /* AppDelegate.swift in Sources */,
 				C7F0C3FB1CB33B7D00B5E380 /* Message.swift in Sources */,
