@@ -6,6 +6,8 @@ target 'fbMessenger' do
   use_frameworks!
 
   pod 'SnapKit'
+  pod 'IGListKit'
+  pod 'Kingfisher'
   # Pods for fbMessenger
 
 end

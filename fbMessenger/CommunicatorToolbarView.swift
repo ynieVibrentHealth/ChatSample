@@ -33,6 +33,7 @@ class CommunicatorToolbarView:UIView {
         button.layer.masksToBounds = true;
         button.setTitle("Send", for: .normal)
         button.backgroundColor = UIColor.white
+        button.setTitleColor(UIColor.black, for: .normal)
         button.addTarget(self, action: #selector(CommunicatorToolbarView.submitPressed), for: .touchUpInside)
         self.addSubview(button)
         return button

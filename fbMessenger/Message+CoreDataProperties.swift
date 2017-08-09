@@ -11,6 +11,7 @@
 
 import Foundation
 import CoreData
+import IGListKit
 
 extension Message {
 
@@ -19,4 +20,19 @@ extension Message {
     @NSManaged var isSender: NSNumber?
     @NSManaged var friend: Friend?
 
+}
+
+extension Message: ListDiffable {
+    func diffIdentifier() -> NSObjectProtocol {
+        return self as NSObjectProtocol
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard let msg = object as? Message else {return false}
+        if msg.friend == self.friend && msg.text == self.text && msg.date == msg.date {
+            return true
+        } else {
+            return false
+        }
+    }
 }
