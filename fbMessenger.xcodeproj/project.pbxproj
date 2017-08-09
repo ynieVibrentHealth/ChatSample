@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C696C681F3A5BFA00366947 /* ChatLogSenderMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C671F3A5BFA00366947 /* ChatLogSenderMessageCell.swift */; };
+		4C696C6A1F3A5C0500366947 /* ChatLogSelfMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C691F3A5C0500366947 /* ChatLogSelfMessageCell.swift */; };
+		4C696C6D1F3A5C7500366947 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C6C1F3A5C7500366947 /* ChatModel.swift */; };
+		4C696C701F3B4ADB00366947 /* ChatContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C6F1F3B4ADB00366947 /* ChatContainerController.swift */; };
 		C7087C981CC01DE100D22270 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7087C971CC01DE100D22270 /* CustomTabBarController.swift */; };
 		C7154C791CB86CB400877DD2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7154C781CB86CB400877DD2 /* ChatLogController.swift */; };
 		C7747B791CAF451200A8B1DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7747B781CAF451200A8B1DA /* AppDelegate.swift */; };
@@ -19,9 +23,15 @@
 		C7F0C3FB1CB33B7D00B5E380 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F0C3F71CB33B7D00B5E380 /* Message.swift */; };
 		C7F0C3FC1CB33B7D00B5E380 /* Friend+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F0C3F81CB33B7D00B5E380 /* Friend+CoreDataProperties.swift */; };
 		C7F0C3FD1CB33B7D00B5E380 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F0C3F91CB33B7D00B5E380 /* Friend.swift */; };
+		F3D9BA14324E82B20D6EF828 /* Pods_fbMessenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F94230F77925823783A0D9 /* Pods_fbMessenger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C696C671F3A5BFA00366947 /* ChatLogSenderMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogSenderMessageCell.swift; sourceTree = "<group>"; };
+		4C696C691F3A5C0500366947 /* ChatLogSelfMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogSelfMessageCell.swift; sourceTree = "<group>"; };
+		4C696C6C1F3A5C7500366947 /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		4C696C6F1F3B4ADB00366947 /* ChatContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContainerController.swift; sourceTree = "<group>"; };
+		981957F5AF9BC0C7FEA9A6C2 /* Pods-fbMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbMessenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbMessenger/Pods-fbMessenger.debug.xcconfig"; sourceTree = "<group>"; };
 		C7087C971CC01DE100D22270 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		C7154C781CB86CB400877DD2 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
 		C7747B751CAF451200A8B1DA /* fbMessenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbMessenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +46,8 @@
 		C7F0C3F71CB33B7D00B5E380 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		C7F0C3F81CB33B7D00B5E380 /* Friend+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Friend+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C7F0C3F91CB33B7D00B5E380 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		D7ABE25756F821244E812881 /* Pods-fbMessenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbMessenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-fbMessenger/Pods-fbMessenger.release.xcconfig"; sourceTree = "<group>"; };
+		E2F94230F77925823783A0D9 /* Pods_fbMessenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fbMessenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +55,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3D9BA14324E82B20D6EF828 /* Pods_fbMessenger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		106E4CAC7624054263346936 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2F94230F77925823783A0D9 /* Pods_fbMessenger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C696C651F3A5B1200366947 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C696C671F3A5BFA00366947 /* ChatLogSenderMessageCell.swift */,
+				4C696C691F3A5C0500366947 /* ChatLogSelfMessageCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		4C696C661F3A5B2E00366947 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				4C696C6E1F3B497B00366947 /* Views */,
+				4C696C651F3A5B1200366947 /* Cells */,
+				C7154C781CB86CB400877DD2 /* ChatLogController.swift */,
+				4C696C6C1F3A5C7500366947 /* ChatModel.swift */,
+				4C696C6F1F3B4ADB00366947 /* ChatContainerController.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		4C696C6E1F3B497B00366947 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		C7747B6C1CAF451200A8B1DA = {
 			isa = PBXGroup;
 			children = (
 				C7747B771CAF451200A8B1DA /* fbMessenger */,
 				C7747B761CAF451200A8B1DA /* Products */,
+				FA4E7FCB6E9635C1439DB5EF /* Pods */,
+				106E4CAC7624054263346936 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +119,7 @@
 		C7747B771CAF451200A8B1DA /* fbMessenger */ = {
 			isa = PBXGroup;
 			children = (
+				4C696C661F3A5B2E00366947 /* Chat */,
 				C7747B781CAF451200A8B1DA /* AppDelegate.swift */,
 				C7747B7A1CAF451200A8B1DA /* ViewController.swift */,
 				C7747B821CAF451200A8B1DA /* Assets.xcassets */,
@@ -79,10 +131,18 @@
 				C7F0C3F71CB33B7D00B5E380 /* Message.swift */,
 				C7F0C3F81CB33B7D00B5E380 /* Friend+CoreDataProperties.swift */,
 				C7F0C3F91CB33B7D00B5E380 /* Friend.swift */,
-				C7154C781CB86CB400877DD2 /* ChatLogController.swift */,
 				C7087C971CC01DE100D22270 /* CustomTabBarController.swift */,
 			);
 			path = fbMessenger;
+			sourceTree = "<group>";
+		};
+		FA4E7FCB6E9635C1439DB5EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				981957F5AF9BC0C7FEA9A6C2 /* Pods-fbMessenger.debug.xcconfig */,
+				D7ABE25756F821244E812881 /* Pods-fbMessenger.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7747B8A1CAF451200A8B1DA /* Build configuration list for PBXNativeTarget "fbMessenger" */;
 			buildPhases = (
+				A6A2720930F3C0BED1CF9819 /* [CP] Check Pods Manifest.lock */,
 				C7747B711CAF451200A8B1DA /* Sources */,
 				C7747B721CAF451200A8B1DA /* Frameworks */,
 				C7747B731CAF451200A8B1DA /* Resources */,
+				7A1793AF25034E033A672532 /* [CP] Embed Pods Frameworks */,
+				F0729498CF1B17D5081FE202 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -112,11 +175,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = letsbuildthatapp;
 				TargetAttributes = {
 					C7747B741CAF451200A8B1DA = {
 						CreatedOnToolsVersion = 7.2.1;
+						LastSwiftMigration = 0830;
 					};
 				};
 			};
@@ -150,20 +214,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A1793AF25034E033A672532 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbMessenger/Pods-fbMessenger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6A2720930F3C0BED1CF9819 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0729498CF1B17D5081FE202 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-fbMessenger/Pods-fbMessenger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C7747B711CAF451200A8B1DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C696C6A1F3A5C0500366947 /* ChatLogSelfMessageCell.swift in Sources */,
 				C7154C791CB86CB400877DD2 /* ChatLogController.swift in Sources */,
 				C7747B7B1CAF451200A8B1DA /* ViewController.swift in Sources */,
 				C7087C981CC01DE100D22270 /* CustomTabBarController.swift in Sources */,
+				4C696C681F3A5BFA00366947 /* ChatLogSenderMessageCell.swift in Sources */,
 				C7747B811CAF451200A8B1DA /* fbMessenger.xcdatamodeld in Sources */,
 				C7747B791CAF451200A8B1DA /* AppDelegate.swift in Sources */,
 				C7F0C3FB1CB33B7D00B5E380 /* Message.swift in Sources */,
 				C7F0C3FA1CB33B7D00B5E380 /* Message+CoreDataProperties.swift in Sources */,
 				C7F0C3F51CB33A8C00B5E380 /* FriendsControllerHelper.swift in Sources */,
 				C7F0C3FC1CB33B7D00B5E380 /* Friend+CoreDataProperties.swift in Sources */,
+				4C696C701F3B4ADB00366947 /* ChatContainerController.swift in Sources */,
+				4C696C6D1F3A5C7500366947 /* ChatModel.swift in Sources */,
 				C7F0C3FD1CB33B7D00B5E380 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,8 +311,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -240,8 +358,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -260,6 +380,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -267,23 +388,27 @@
 		};
 		C7747B8B1CAF451200A8B1DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 981957F5AF9BC0C7FEA9A6C2 /* Pods-fbMessenger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = fbMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.letsbuildthatapp.fbMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		C7747B8C1CAF451200A8B1DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7ABE25756F821244E812881 /* Pods-fbMessenger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = fbMessenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.letsbuildthatapp.fbMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
