@@ -22,7 +22,7 @@ class ChatContainerController:UIViewController {
         let layout = UICollectionViewFlowLayout()
         let controller = ChatLogController()
         controller.friend = self.friend
-        self.scrollContainer.addSubview(controller)
+        self.scrollContainer.addSubview(controller.view)
         return controller
     }()
     

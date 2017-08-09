@@ -7,10 +7,48 @@
 //
 
 import UIKit
+import SnapKit
 
-class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class ChatLogController: UIViewController {
     
-    fileprivate let cellId = "cellId"
+    fileprivate lazy var chatController:UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = UIColor.white
+        collectionView.register(ChatLogSelfMessageCell.self, forCellWithReuseIdentifier: ChatLogSelfMessageCell.reuseId)
+        collectionView.register(ChatLogSenderMessageCell.self, forCellWithReuseIdentifier: ChatLogSenderMessageCell.reuseId)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        self.contentView.addSubview(collectionView)
+        return collectionView
+    }()
+    
+    private lazy var contentView:UIView = {
+        let view = UIView()
+        self.scrollContainer.addSubview(view)
+        return view
+    }()
+    
+    private lazy var scrollContainer:UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.bounces = false
+        scrollView.backgroundColor = UIColor.white
+        self.view.addSubview(scrollView)
+        return scrollView
+    }()
+    
+    private lazy var toolBar:UIToolbar = {
+        let toolBar = UIToolbar()
+        
+        self.contentView.addSubview(toolBar)
+        return toolBar
+    }()
+    
+    private lazy var textField:UITextField = {
+        let textField = UITextField()
+        
+        return textField
+    }()
     
     var friend: Friend? {
         didSet {
@@ -24,20 +62,44 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.backgroundColor = UIColor.white
-        
-        collectionView?.register(ChatLogSelfMessageCell.self, forCellWithReuseIdentifier: ChatLogSelfMessageCell.reuseId)
-        collectionView?.register(ChatLogSenderMessageCell.self, forCellWithReuseIdentifier: ChatLogSenderMessageCell.reuseId)
+        self.view.setNeedsUpdateConstraints()
+        self.view.updateConstraintsIfNeeded()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func updateViewConstraints() {
+        scrollContainer.snp.updateConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
+        
+        contentView.snp.updateConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
+        
+        toolBar.snp.updateConstraints { (make) in
+            make.bottom.leading.trailing.equalTo(self.contentView)
+            make.height.equalTo(44)
+        }
+        
+        chatController.snp.updateConstraints { (make) in
+            make.top.leading.trailing.equalTo(self.contentView)
+            //make.bottom.equalTo(self.contentView)
+            make.bottom.equalTo(self.toolBar.snp.top)
+        }
+        
+        super.updateViewConstraints()
+    }
+    
+}
+
+extension ChatLogController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let count = messages?.count {
             return count
         }
         return 0
     }
     
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if let message = messages?[indexPath.item] {
             
@@ -55,7 +117,9 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
         
         return UICollectionViewCell()
     }
-    
+}
+
+extension ChatLogController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         if let messageText = messages?[indexPath.item].text {
@@ -72,5 +136,4 @@ class ChatLogController: UICollectionViewController, UICollectionViewDelegateFlo
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(8, 0, 0, 0)
     }
-    
 }

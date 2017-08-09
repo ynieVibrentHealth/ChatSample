@@ -49,7 +49,7 @@ class FriendsController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let controller = ChatContainerController()
+        let controller = ChatLogController()
         controller.friend = messages?[indexPath.item].friend
         self.navigationController?.present(controller, animated: true, completion: nil)
     }
