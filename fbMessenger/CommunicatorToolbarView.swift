@@ -64,6 +64,7 @@ class CommunicatorToolbarView:UIView {
 
 extension CommunicatorToolbarView {
     @objc fileprivate func submitPressed() {
+        inputTextView.resignFirstResponder()
         delegate?.submitPressed(messageText: inputTextView.text)
     }
     

@@ -52,8 +52,8 @@ class ChatLogSelfMessageCell: UICollectionViewCell {
     override func updateConstraints() {
         messageTextView.snp.updateConstraints { (make) in
             make.centerY.equalTo(self.textBubbleView)
-            make.trailing.equalTo(self.textBubbleView).inset(InsetConstant * 2)
-            make.leading.equalTo(self.textBubbleView).offset(15)
+            make.trailing.equalTo(self.textBubbleView).inset(17)
+            make.leading.equalTo(self.textBubbleView).inset(10)
             make.width.lessThanOrEqualTo(self.contentView).multipliedBy(0.67)
         }
         
