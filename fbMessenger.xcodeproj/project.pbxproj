@@ -10,9 +10,12 @@
 		4C696C681F3A5BFA00366947 /* ChatLogSenderMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C671F3A5BFA00366947 /* ChatLogSenderMessageCell.swift */; };
 		4C696C6A1F3A5C0500366947 /* ChatLogSelfMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C691F3A5C0500366947 /* ChatLogSelfMessageCell.swift */; };
 		4C696C6D1F3A5C7500366947 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C6C1F3A5C7500366947 /* ChatModel.swift */; };
-		4C696C701F3B4ADB00366947 /* ChatContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C6F1F3B4ADB00366947 /* ChatContainerController.swift */; };
 		4C696C721F3B952B00366947 /* CommunicatorToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C711F3B952B00366947 /* CommunicatorToolbarView.swift */; };
 		4C696C741F3BB70D00366947 /* CommunicatorChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C696C731F3BB70D00366947 /* CommunicatorChatController.swift */; };
+		4CB5A4881F4616C000FB80CC /* CommunicatorTextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5A4871F4616C000FB80CC /* CommunicatorTextController.swift */; };
+		4CB5A48B1F46179900FB80CC /* CommunicatorTextModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5A48A1F46179900FB80CC /* CommunicatorTextModel.swift */; };
+		4CB5A48D1F4617A500FB80CC /* CommunicatorImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5A48C1F4617A500FB80CC /* CommunicatorImageModel.swift */; };
+		4CB5A48F1F4627F400FB80CC /* CommunicatorImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB5A48E1F4627F400FB80CC /* CommunicatorImageCell.swift */; };
 		C7087C981CC01DE100D22270 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7087C971CC01DE100D22270 /* CustomTabBarController.swift */; };
 		C7154C791CB86CB400877DD2 /* ChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7154C781CB86CB400877DD2 /* ChatLogController.swift */; };
 		C7747B791CAF451200A8B1DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7747B781CAF451200A8B1DA /* AppDelegate.swift */; };
@@ -32,9 +35,12 @@
 		4C696C671F3A5BFA00366947 /* ChatLogSenderMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogSenderMessageCell.swift; sourceTree = "<group>"; };
 		4C696C691F3A5C0500366947 /* ChatLogSelfMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogSelfMessageCell.swift; sourceTree = "<group>"; };
 		4C696C6C1F3A5C7500366947 /* ChatModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
-		4C696C6F1F3B4ADB00366947 /* ChatContainerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatContainerController.swift; sourceTree = "<group>"; };
 		4C696C711F3B952B00366947 /* CommunicatorToolbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorToolbarView.swift; sourceTree = "<group>"; };
 		4C696C731F3BB70D00366947 /* CommunicatorChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorChatController.swift; sourceTree = "<group>"; };
+		4CB5A4871F4616C000FB80CC /* CommunicatorTextController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorTextController.swift; sourceTree = "<group>"; };
+		4CB5A48A1F46179900FB80CC /* CommunicatorTextModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorTextModel.swift; sourceTree = "<group>"; };
+		4CB5A48C1F4617A500FB80CC /* CommunicatorImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorImageModel.swift; sourceTree = "<group>"; };
+		4CB5A48E1F4627F400FB80CC /* CommunicatorImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommunicatorImageCell.swift; sourceTree = "<group>"; };
 		981957F5AF9BC0C7FEA9A6C2 /* Pods-fbMessenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fbMessenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-fbMessenger/Pods-fbMessenger.debug.xcconfig"; sourceTree = "<group>"; };
 		C7087C971CC01DE100D22270 /* CustomTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		C7154C781CB86CB400877DD2 /* ChatLogController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatLogController.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 			children = (
 				4C696C671F3A5BFA00366947 /* ChatLogSenderMessageCell.swift */,
 				4C696C691F3A5C0500366947 /* ChatLogSelfMessageCell.swift */,
+				4CB5A48E1F4627F400FB80CC /* CommunicatorImageCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -86,12 +93,13 @@
 		4C696C661F3A5B2E00366947 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				4CB5A4891F46178300FB80CC /* Models */,
 				4C696C6E1F3B497B00366947 /* Views */,
 				4C696C651F3A5B1200366947 /* Cells */,
 				C7154C781CB86CB400877DD2 /* ChatLogController.swift */,
 				4C696C6C1F3A5C7500366947 /* ChatModel.swift */,
-				4C696C6F1F3B4ADB00366947 /* ChatContainerController.swift */,
 				4C696C731F3BB70D00366947 /* CommunicatorChatController.swift */,
+				4CB5A4871F4616C000FB80CC /* CommunicatorTextController.swift */,
 			);
 			name = Chat;
 			sourceTree = "<group>";
@@ -102,6 +110,15 @@
 				4C696C711F3B952B00366947 /* CommunicatorToolbarView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		4CB5A4891F46178300FB80CC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CB5A48A1F46179900FB80CC /* CommunicatorTextModel.swift */,
+				4CB5A48C1F4617A500FB80CC /* CommunicatorImageModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		C7747B6C1CAF451200A8B1DA = {
@@ -274,21 +291,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C696C741F3BB70D00366947 /* CommunicatorChatController.swift in Sources */,
+				4CB5A4881F4616C000FB80CC /* CommunicatorTextController.swift in Sources */,
 				4C696C6A1F3A5C0500366947 /* ChatLogSelfMessageCell.swift in Sources */,
 				C7154C791CB86CB400877DD2 /* ChatLogController.swift in Sources */,
 				C7747B7B1CAF451200A8B1DA /* ViewController.swift in Sources */,
 				C7087C981CC01DE100D22270 /* CustomTabBarController.swift in Sources */,
+				4CB5A48D1F4617A500FB80CC /* CommunicatorImageModel.swift in Sources */,
 				4C696C681F3A5BFA00366947 /* ChatLogSenderMessageCell.swift in Sources */,
 				4C696C721F3B952B00366947 /* CommunicatorToolbarView.swift in Sources */,
 				C7747B811CAF451200A8B1DA /* fbMessenger.xcdatamodeld in Sources */,
+				4CB5A48F1F4627F400FB80CC /* CommunicatorImageCell.swift in Sources */,
 				C7747B791CAF451200A8B1DA /* AppDelegate.swift in Sources */,
 				C7F0C3FB1CB33B7D00B5E380 /* Message.swift in Sources */,
 				C7F0C3FA1CB33B7D00B5E380 /* Message+CoreDataProperties.swift in Sources */,
 				C7F0C3F51CB33A8C00B5E380 /* FriendsControllerHelper.swift in Sources */,
 				C7F0C3FC1CB33B7D00B5E380 /* Friend+CoreDataProperties.swift in Sources */,
-				4C696C701F3B4ADB00366947 /* ChatContainerController.swift in Sources */,
 				4C696C6D1F3A5C7500366947 /* ChatModel.swift in Sources */,
 				C7F0C3FD1CB33B7D00B5E380 /* Friend.swift in Sources */,
+				4CB5A48B1F46179900FB80CC /* CommunicatorTextModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

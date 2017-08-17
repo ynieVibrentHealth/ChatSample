@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class ChatLogSenderMessageCell: UICollectionViewCell {
+class CommunicatorProviderTextCell: UICollectionViewCell {
     let InsetConstant:CGFloat = 5
     let imageSize:CGFloat = 30
     static let reuseId = "ChatLogSenderMessageCell"
@@ -52,8 +52,8 @@ class ChatLogSenderMessageCell: UICollectionViewCell {
         return imageView
     }()
     
-    func configure(message: Message) {
-        if let profileImageName = message.friend?.profileImageName {
+    func configure(message: CommunicatorTextModel) {
+        if let profileImageName = message.senderProfileImage {
             self.profileImageView.image = UIImage(named: profileImageName)
         }
         
@@ -73,7 +73,6 @@ class ChatLogSenderMessageCell: UICollectionViewCell {
         }
         
         messageTextView.snp.updateConstraints { (make) in
-//            make.top.bottom.equalTo(self.textBubbleView).inset(InsetConstant)
             make.centerY.equalTo(self.textBubbleView)
             make.trailing.equalTo(self.textBubbleView).inset(8)
             make.leading.equalTo(self.textBubbleView).inset(20)

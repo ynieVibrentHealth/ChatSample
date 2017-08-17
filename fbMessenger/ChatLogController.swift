@@ -16,8 +16,8 @@ class ChatLogController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.white
-        collectionView.register(ChatLogSelfMessageCell.self, forCellWithReuseIdentifier: ChatLogSelfMessageCell.reuseId)
-        collectionView.register(ChatLogSenderMessageCell.self, forCellWithReuseIdentifier: ChatLogSenderMessageCell.reuseId)
+//        collectionView.register(ChatLogSelfMessageCell.self, forCellWithReuseIdentifier: ChatLogSelfMessageCell.reuseId)
+//        collectionView.register(ChatLogSenderMessageCell.self, forCellWithReuseIdentifier: ChatLogSenderMessageCell.reuseId)
         collectionView.dataSource = self
         collectionView.delegate = self
         self.contentView.addSubview(collectionView)
@@ -113,19 +113,19 @@ extension ChatLogController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let message = messages?[indexPath.item] {
-            
-            if message.isSender == nil || !message.isSender!.boolValue {
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatLogSenderMessageCell.reuseId, for: indexPath) as! ChatLogSenderMessageCell
-                cell.configure(message: message)
-                return cell
-            } else {
-                //outgoing sending message
-                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatLogSelfMessageCell.reuseId, for: indexPath) as! ChatLogSelfMessageCell
-                cell.configure(with: message)
-                return cell
-            }
-        }
+//        if let message = messages?[indexPath.item] {
+//            
+//            if message.isSender == nil || !message.isSender!.boolValue {
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatLogSenderMessageCell.reuseId, for: indexPath) as! ChatLogSenderMessageCell
+//                cell.configure(message: message)
+//                return cell
+//            } else {
+//                //outgoing sending message
+//                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ChatLogSelfMessageCell.reuseId, for: indexPath) as! ChatLogSelfMessageCell
+//                cell.configure(with: message)
+//                return cell
+//            }
+//        }
         
         return UICollectionViewCell()
     }

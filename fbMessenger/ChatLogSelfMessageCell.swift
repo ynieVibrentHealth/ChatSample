@@ -10,7 +10,7 @@ import Foundation
 import SnapKit
 import UIKit
 
-class ChatLogSelfMessageCell: UICollectionViewCell {
+class CommunicatorSelfTextCell: UICollectionViewCell {
     let InsetConstant:CGFloat = 5
     static let reuseId = "ChatLogSelfMessageCell"
     private lazy var messageTextView: UITextView = {
@@ -41,7 +41,7 @@ class ChatLogSelfMessageCell: UICollectionViewCell {
         return imageView
     }()
     
-    func configure(with message:Message) {
+    func configure(with message:CommunicatorTextModel) {
         bubbleImageView.image = ChatModel.Images.BLUE_BUBBLE_IMAGE
         messageTextView.text = message.text
         
